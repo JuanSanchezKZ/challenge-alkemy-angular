@@ -42,10 +42,12 @@ export class LoginComponent implements OnInit {
               title: 'Oops...',
               text: 'Contraseña o E-Mail incorrecto.',
             });
+            this.submitted = false;
           },
         });
+      this.submitted = true;
+    } else {
     }
-    this.submitted = true;
   }
 
   ngOnInit(): void {}
