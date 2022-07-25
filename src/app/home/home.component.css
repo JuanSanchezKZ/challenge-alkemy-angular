@@ -1,0 +1,84 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
+
+.container-sm {
+  background-color: #1f8a66;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  border: 2px solid #17694e4f;
+}
+
+.data {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+
+  font-weight: 700;
+}
+
+.menu-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(237, 17%, 21%);
+  letter-spacing: 3px;
+}
+
+.form {
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.results {
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 3px;
+}
+
+.dish-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: hsl(237, 17%, 21%);
+  letter-spacing: 3px;
+}
+
+.button-primary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #2a99729d;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  margin: 1rem 0 1rem 0;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.button-primary:hover {
+  background-color: #5bcfa7;
+  color: white;
+}
+
+.button-secondary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #0a3023;
+  color: white;
+  border: 1px solid black;
+  margin-top: 1rem;
+  margin: 1rem 0 1rem 0;
+  font-weight: 500;
+}
+
+.button-secondary:hover {
+  background-color: #5bcfa7;
+  color: white;
+}
+
+hr {
+  width: 30vw;
+}

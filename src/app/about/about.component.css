@@ -1,0 +1,12 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(237, 17%, 21%);
+  letter-spacing: 3px;
+}

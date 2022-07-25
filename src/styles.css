@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+html {
+  position: relative;
+  display: block;
+  background-image: url(/assets/images/liquid-cheese.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  background-color: transparent;
+}

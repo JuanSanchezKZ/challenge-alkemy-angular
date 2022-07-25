@@ -1,0 +1,15 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  margin: 2rem;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+}
+
+.nav-link {
+  letter-spacing: 2px;
+}

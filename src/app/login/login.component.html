@@ -1,0 +1,44 @@
+<form [formGroup]="form" #ngForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="container-sm">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">E-mail</label>
+          <input
+            [class.is-invalid]="
+              form.get('email')?.touched && form.get('email')?.invalid
+            "
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Contraseña</label
+          >
+          <input
+            [class.is-invalid]="
+              form.get('password')?.touched && form.get('password')?.invalid
+            "
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="password"
+          />
+        </div>
+        <div class="invalid" *ngIf="form.invalid && ngForm.submitted">
+          La contraseña y el e-email son requeridos.
+        </div>
+
+        <button type="submit" [disabled]="submitted" class="button-primary">
+          <div *ngIf="submitted; else elseBlock">Ingresando</div>
+          <ng-template #elseBlock>Ingresá</ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

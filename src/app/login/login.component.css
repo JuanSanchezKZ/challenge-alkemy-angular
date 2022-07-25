@@ -1,0 +1,20 @@
+.invalid {
+  color: red;
+  margin-top: -15px;
+}
+
+.button-primary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #1858429d;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  margin: 1rem 0 1rem 0;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.button-primary:hover {
+  background-color: #5bcfa7;
+  color: white;
+}
