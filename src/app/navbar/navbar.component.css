@@ -8,8 +8,10 @@
 
 .navbar-brand {
   letter-spacing: 3px;
+  font-weight: 700;
 }
 
 .nav-link {
   letter-spacing: 2px;
+  font-weight: 700;
 }
