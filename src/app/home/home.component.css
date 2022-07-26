@@ -22,7 +22,7 @@
 .menu-title {
   font-weight: 700;
   font-size: 2rem;
-  color: hsl(0, 0%, 17%);
+  color: hsl(237, 17%, 21%);
   letter-spacing: 3px;
 }
 
@@ -43,7 +43,7 @@
 .dish-title {
   font-weight: 500;
   font-size: 1.5rem;
-  color: hsl(0, 0%, 17%);
+  color: hsl(237, 17%, 21%);
   letter-spacing: 3px;
 }
 
@@ -81,4 +81,8 @@
 
 hr {
   width: 30vw;
+}
+
+.card-text-title {
+  font-weight: 500;
 }

@@ -20,7 +20,8 @@
         <p>Precio Total: {{ totalPrice | currency }}</p>
         <div class="row">
           <div class="col-sm">
-            Tiempo de Preparación Promedio: {{ promPrep }} minutos.
+            Tiempo de Preparación Promedio: {{ promPrep }}
+            {{ promPrep ? "minutos." : "" }}
           </div>
         </div>
       </div>
@@ -65,7 +66,7 @@
 </div>
 
 <ng-template #template>
-  <div class="modal-header text-center">
+  <div class="modal-header">
     <h4 class="modal-title">{{ modalDetails.title }}</h4>
     <button
       type="button"
@@ -83,18 +84,22 @@
           <img class="img-fluid" [src]="modalDetails.image" alt="image" />
         </div>
         <div class="col-sm-6">
-          <p class="card-text">
-            {{ modalDetails.pricePerServing | currency }}
-          </p>
-          <p class="card-text">Healthscore: {{ modalDetails.healthScore }}</p>
           <div class="card-text">
-            Vegano:
-            <div *ngIf="modalDetails.vegan; else elseBlock">Sí</div>
-            <ng-template #elseBlock>No</ng-template>
+            <div class="card-text-title">Precio:</div>
+            {{ modalDetails.pricePerServing | currency }}
           </div>
-          <p class="card-text mt-3">
-            Tiempo de Preparación: {{ modalDetails.readyInMinutes }} minutos.
-          </p>
+          <div class="card-text mt-3">
+            <div class="card-text-title">Healthscore:</div>
+            {{ modalDetails.healthScore }}
+          </div>
+          <div class="card-text mt-3">
+            <div class="card-text-title">Vegano:</div>
+            {{ modalDetails.vegan ? "Si" : "No" }}
+          </div>
+          <div class="card-text mt-3">
+            <div class="card-text-title">Tiempo de Preparación:</div>
+            {{ modalDetails.readyInMinutes }} minutos.
+          </div>
         </div>
       </div>
     </div>

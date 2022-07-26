@@ -10,4 +10,8 @@ export class GetMenuService {
   getSearchMenuItem(querySearch: any) {
     return this.api.getMenuItemSearch(querySearch);
   }
+
+  getMenuItemById(id: any) {
+    return this.api.getMenuItemById(id);
+  }
 }

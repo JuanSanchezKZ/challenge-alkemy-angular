@@ -9,11 +9,7 @@ import { GetMenuService } from '../get-menu.service';
 export class MenuItemComponent implements OnInit {
   @Input() public item: any;
 
-  constructor(private getItem: GetMenuService) {}
-
-  getDish(query: any) {
-    this.getItem.getSearchMenuItem(query);
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }

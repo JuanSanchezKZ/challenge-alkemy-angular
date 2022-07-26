@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
   modalRef?: BsModalRef;
   modalDetails: any;
   menu: any[] = [];
-  veganAmount: number = 0;
-  notVeganAmount: number = 0;
+  veganAmount: number = 2;
+  notVeganAmount: number = 2;
   totalProm: any;
   totalPrice: any;
   promPrep: any;
@@ -63,7 +63,6 @@ export class HomeComponent implements OnInit {
     } else if (dish.vegan) {
       this.veganAmount++;
       this.menu.push(dish);
-      console.log(this.veganAmount, 'vegan added');
     } else if (this.notVeganAmount === 2) {
       Swal.fire({
         icon: 'error',
@@ -72,7 +71,7 @@ export class HomeComponent implements OnInit {
       });
     } else if (!dish.vegan) {
       this.notVeganAmount++;
-      console.log(this.notVeganAmount, 'not vegan added');
+
       this.menu.push(dish);
     }
     this.updateDetails();
@@ -97,18 +96,13 @@ export class HomeComponent implements OnInit {
 
   removeFromMenu(dish: any) {
     // this.menu.splice(dish, 1);
-    const filterDish = this.menu.filter((e) => e !== dish);
     if (dish.vegan) {
       this.veganAmount--;
-      console.log(this.veganAmount, 'vegan removed');
-      this.menu = filterDish;
-      this.updateDetails();
-    } else if (!dish.vegan) {
+    } else {
       this.notVeganAmount--;
-      console.log(this.notVeganAmount, 'not vegan removed');
-      this.menu = filterDish;
-      this.updateDetails();
     }
+    this.menu = this.menu.filter((e) => e !== dish);
+    this.updateDetails();
   }
 
   search() {
@@ -132,9 +126,20 @@ export class HomeComponent implements OnInit {
   openModal(template: TemplateRef<any>, currentItem: any) {
     this.modalRef = this.modalService.show(template);
     this.modalDetails = currentItem;
+    console.log(currentItem.id);
+  }
+
+  getMenubyId(id: number) {
+    this.getMenu.getMenuItemById(id).subscribe((data) => {
+      this.menu.push(data);
+    });
   }
 
   ngOnInit(): void {
     this.search();
+    this.getMenubyId(716429);
+    this.getMenubyId(664419);
+    this.getMenubyId(660101);
+    this.getMenubyId(649182);
   }
 }
