@@ -132,6 +132,7 @@ export class HomeComponent implements OnInit {
   getMenubyId(id: number) {
     this.getMenu.getMenuItemById(id).subscribe((data) => {
       this.menu.push(data);
+      this.updateDetails();
     });
   }
 
