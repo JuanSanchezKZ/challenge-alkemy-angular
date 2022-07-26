@@ -1,6 +1,16 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
 .invalid {
   color: red;
   margin-top: -15px;
+}
+
+label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .button-primary {
