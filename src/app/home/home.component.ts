@@ -12,10 +12,11 @@ import {
   fromEvent,
   map,
 } from 'rxjs';
-import { GetMenuService } from '../get-menu.service';
+
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import Swal from 'sweetalert2';
 import { PricePreparationService } from '../price-preparation.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
   promPrep: any;
 
   constructor(
-    private getMenu: GetMenuService,
+    private api: ApiService,
     private modalService: BsModalService,
     private prices: PricePreparationService
   ) {}
@@ -116,7 +117,7 @@ export class HomeComponent implements OnInit {
         distinctUntilChanged()
       )
       .subscribe((data: any) => {
-        this.getMenu.getSearchMenuItem(data).subscribe((response) => {
+        this.api.getMenuItemSearch(data).subscribe((response) => {
           this.results = response.results;
           console.log(data, response);
         });
@@ -130,7 +131,7 @@ export class HomeComponent implements OnInit {
   }
 
   getMenubyId(id: number) {
-    this.getMenu.getMenuItemById(id).subscribe((data) => {
+    this.api.getMenuItemById(id).subscribe((data) => {
       this.menu.push(data);
       this.updateDetails();
     });
