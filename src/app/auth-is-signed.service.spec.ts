@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GetMenuService } from './get-menu.service';
+import { AuthIsSignedService } from './auth-is-signed.service';
 
-describe('GetMenuService', () => {
-  let service: GetMenuService;
+describe('AuthIsSignedService', () => {
+  let service: AuthIsSignedService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GetMenuService);
+    service = TestBed.inject(AuthIsSignedService);
   });
 
   it('should be created', () => {

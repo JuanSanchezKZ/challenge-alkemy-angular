@@ -16,6 +16,5 @@ export class NavbarComponent implements OnInit {
   logOut() {
     localStorage.removeItem('currentUser');
     this.route.navigateByUrl('/login');
-    console.log(localStorage.getItem('currentUser'));
   }
 }
