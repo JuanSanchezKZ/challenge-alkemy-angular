@@ -13,9 +13,9 @@ export class PricePreparationService {
   promHealthScore() {
     let acc = 0;
     for (let i of this.menu) {
-      acc = acc + i.healthScore / this.menu.length;
+      acc += i.healthScore;
     }
-    this.prom = acc;
+    this.prom = acc / this.menu.length;
   }
 
   accPrices() {
@@ -29,8 +29,8 @@ export class PricePreparationService {
   promPreparations() {
     let acc = 0;
     for (let i of this.menu) {
-      acc = acc + i.readyInMinutes / this.menu.length;
+      acc += i.readyInMinutes;
     }
-    this.promPrep = acc;
+    this.promPrep = acc / this.menu.length;
   }
 }

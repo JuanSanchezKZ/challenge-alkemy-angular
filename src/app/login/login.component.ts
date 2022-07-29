@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
   errorMessage: any;
   form = new FormGroup({
-    email: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
   });
   submitted = false;
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           },
           error: (error) => {
             this.errorMessage = error.message;
-            console.error('There was an error!', error);
+            console.error('There was an error!', this.errorMessage);
             Swal.fire({
               icon: 'error',
               title: 'Oops...',

@@ -2,9 +2,39 @@
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
 }
+
+.container-sm {
+  background-color: white;
+
+  width: 940px;
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 9px;
+}
+
+.image-login {
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 940px) {
+  .container-sm {
+    width: auto;
+  }
+}
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
 .invalid {
   color: red;
-  margin-top: -15px;
+}
+
+input {
+  border-radius: 18px;
+  height: 2.5rem;
 }
 
 label {
@@ -24,7 +54,7 @@ label {
   font-weight: 500;
 }
 
-.button-primary:hover {
+.button-primary:hover:enabled {
   background-color: #5bcfa7;
   color: white;
 }
