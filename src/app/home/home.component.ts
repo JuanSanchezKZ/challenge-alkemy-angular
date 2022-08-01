@@ -25,7 +25,7 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
   @ViewChild('searchInput', { static: true })
-  searchInput: ElementRef;
+  searchInput!: ElementRef;
   results: any;
   modalRef?: BsModalRef;
   modalDetails: any;
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
     // call healthscore average method
     this.prices.promHealthScore();
     // set average hs variable to prom hs service variable
-    this.totalProm = this.prices.prom.toFixed(2);
+    this.totalProm = Math.round(this.prices.prom);
     // call price accumulator method
     this.prices.accPrices();
     // set price acc variable to acc service variable
@@ -92,7 +92,7 @@ export class HomeComponent implements OnInit {
     //call preparations average method
     this.prices.promPreparations();
     // set preparation average variable to prep average service variable
-    this.promPrep = this.prices.promPrep;
+    this.promPrep = Math.round(this.prices.promPrep);
   }
 
   removeFromMenu(dish: any) {

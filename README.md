@@ -1,10 +1,41 @@
 # A la Carta
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+Challenge de Alkemy
 
-=======
+A la Carta es un restaurante con un menú virtual variado para todos los gustos. Ofrece un buscador con cientos de opciones veganas y no veganas donde podrás armar tu propio menú
 
-Challenge de Alkemy realizado en Angular.
+Tecnologías y herramientas usadas:
+Angular
+Bootstrap
+Ngx-Bootstrap
+Spoonacular API
 
-Se utilizó Bootstrap para el maquetado.
-Ngx-boostrap para el modal al ver los detalles de un plato.
+## Instalación
+
+Instalar dependencias
+
+```bash
+npm install
+```
+
+Iniciar el servidor
+
+```bash
+ng serve
+```
+
+## Autenticación
+
+Para poder ingresar a la aplicación se necesitarán ingresar los siguientes datos:
+
+E-mail
+
+```bash
+challenge@alkemy.org
+```
+
+Contraseña
+
+```bash
+react
+```
