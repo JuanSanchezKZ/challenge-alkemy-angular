@@ -19,7 +19,7 @@ Instalar dependencias
 npm install
 ```
 
-Iniciar el servidor
+Iniciar la aplicación
 
 ```bash
 ng serve
